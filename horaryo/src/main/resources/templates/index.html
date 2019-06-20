@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <!--/*/ <th:block th:include="template.html :: headerfiles">
+        </th:block> /*/-->
+</head>
+<body>
+
+    <header th:replace="template.html::header">
+        <div>Horaryo</div>
+        <div>&nbsp;</div>
+        <div> Authent </div>
+    </header>
+
+    <div id="projects">
+        Your projects:
+        <span class="empty">You have no active projects</span>
+        <ul>
+
+        </ul>
+
+    </div>
+
+</body>
+</html>

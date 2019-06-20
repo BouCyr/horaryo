@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles">
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+<body>
+
+<header th:fragment="header">
+    <div id="logo">
+        <div class = "dot i" >&nbsp;</div>
+        <div class = "dot o" >&nbsp;</div>
+        <div class = "dot m" >&nbsp;</div>
+        <div class = "dot d" >&nbsp;</div>
+    </div>
+    <h1 id='pageTitle' th:text="${pageTitle}">
+        Horaryo
+    </h1>
+    <div id="authent" th:if="${login != null}">
+        <a class="me" th:text="${login}" href="/users/me"></a>
+        <a href="/logout" class="btn">logout</a>
+    </div>
+</header>
+
+<div id="projects">
+    Your projects:
+    <span class="empty">You have no active projects</span>
+    <ul>
+
+    </ul>
+
+</div>
+
+</body>
+</html>

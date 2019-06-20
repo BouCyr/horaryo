@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Horaryo - authentication</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <!--/*/ <th:block th:include="template.html :: headerfiles">
+       </th:block> /*/-->
+</head>
+<body>
+
+
+    <header th:replace="template.html::header">
+
+    </header>
+
+
+    <main>
+        <div id="legend" class="box" >
+            <h1>Welcome back !</h1>
+            <b>Oraryo</b> allows you to:
+            <ul>
+                <li>Quickly see what are <b class="you">your</b> current tasks,</li>
+                <li><b class="interactive">Update</b> your progress,</li>
+                <li>See the <b class="done">completed</b> tasks,</li>
+                <li>See what your <b class="them">colleagues</b> are doing,</li>
+                <li>And consult what's <b class="backlog">next</b>.</li>
+            </ul>
+        </div>
+        <div id="loginBox" class="box">
+            <h1 >Login</h1>
+            <span class="muted">Authenticate to access your projects.</span>
+
+            <form action="/login" method="POST">
+                <div class="inputBlock">
+                    <label for="username">Your account</label>
+                    <input type="text" id="username" name="username" autocomplete="username" />
+                </div>
+                <div class="inputBlock">
+                    <label for="password">Your password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" />
+
+                    <div class="errorMsg" th:if="${param.error}">
+                        Invalid username and password.
+                    </div>
+                    <div class="errorMsg" th:if="${param.logout}">
+                        You have been logged out.
+                    </div>
+                    <div style="text-align: right">
+                        <a href="#" style="font-size: small; font-weight: initial">Forgot your password ?</a>
+                    </div>
+                </div>
+                <div class="inputBlock" style="text-align: right">
+                    <input type="submit" name="submit" value="Sign in" />
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

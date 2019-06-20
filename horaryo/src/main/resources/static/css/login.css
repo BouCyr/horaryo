@@ -1,0 +1,56 @@
+main{
+    font-size: 125%;
+    justify-content: center;
+    display: flex;
+}
+
+#legend{
+    background: var(--color);
+    color: white;
+}
+#loginBox{
+}
+
+.box{
+
+    border: 1px solid var(--color);
+    padding: 25px;
+    background: white;
+
+}
+.box:first-child{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.box:last-child{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-right: 1px solid var(--color);
+}
+
+#box{
+    display:flex;
+}
+
+label{
+    display:block;
+    font-size:smaller;
+}
+
+.you{
+    color: var(--me);
+}
+.interactive{
+    color: var(--interactive);
+}
+.done{
+    color: var(--done);
+}
+.them{
+    color: var(--ongoing);
+}
+.backlog{
+    color: var(--color);
+    text-shadow: 1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white;
+}
