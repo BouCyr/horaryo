@@ -1,4 +1,7 @@
-package app.cbo.tools.horaryo.devs.entities;
+package app.cbo.tools.horaryo.projects.entities;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,15 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Dev {
+@Getter
+@Setter
+public class Project {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    private long id;
 
-    public String login;
-    public String password;
-
-    public String firstName;
-    public String lastName;
-
+    private String name;
 }
